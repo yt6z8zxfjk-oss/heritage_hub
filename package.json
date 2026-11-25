@@ -5,7 +5,7 @@
     "dev": "node scripts/dev.mjs",
     "server": "npm --prefix server run dev",
     "client": "npm --prefix client run dev",
-    "build": "npm --prefix client run build && npm --prefix server run build",
+    "build": "npm install --prefix client --include=dev && npm install --prefix server --include=dev && npm --prefix client run build && npm --prefix server run build",
     "start": "npm --prefix server start"
   },
   "engines": {
