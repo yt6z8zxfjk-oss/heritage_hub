@@ -1,0 +1,27 @@
+:root {
+  --color-bg: #e7f4ea;
+  --color-bg-deep: #cfe6d8;
+  --color-surface: #fffdf8;
+  --color-ink: #14261c;
+  --color-muted: #2a4334;
+  --color-line: #c5decd;
+  --color-primary: #0f6a43;
+  --color-primary-dark: #0a4a2e;
+  --color-accent: #d4892a;
+  --color-accent-dark: #8f5410;
+  --color-gold: #e2b15a;
+  --color-park: #1e7a52;
+  --color-lake: #17829a;
+  --color-focus: #0f6a43;
+  --shadow-soft: 0 18px 40px rgba(23, 32, 51, 0.08);
+  --shadow-card: 0 12px 30px rgba(23, 32, 51, 0.06);
+  --radius-sm: 12px;
+  --radius-md: 20px;
+  --radius-lg: 32px;
+  --header-h: 88px;
+  --font-body: "Inter", "Segoe UI", sans-serif;
+  --font-display: "Manrope", "Segoe UI", sans-serif;
+  --font-story: "Source Serif 4", Georgia, serif;
+  --space-section: clamp(64px, 8vw, 112px);
+  --container: 1360px;
+}

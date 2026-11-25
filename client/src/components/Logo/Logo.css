@@ -1,0 +1,50 @@
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: inherit;
+  text-decoration: none;
+}
+
+.logo__mark {
+  width: 84px;
+  height: 48px;
+  flex: none;
+  object-fit: contain;
+  object-position: center;
+  background: transparent;
+}
+
+.logo__words {
+  display: grid;
+  justify-items: center;
+  line-height: 1;
+}
+
+.logo__title,
+.logo__title-wide,
+.logo__title-peak {
+  font-family: var(--font-story);
+  font-size: 17px;
+  font-weight: 650;
+  line-height: 1.05;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--color-ink);
+}
+
+.logo__title {
+  display: grid;
+  justify-items: center;
+}
+
+.logo__title-peak {
+  margin-top: 1px;
+}
+
+.logo__words small {
+  margin-top: 4px;
+  color: var(--color-muted);
+  font-family: var(--font-body);
+  font-size: 12px;
+}

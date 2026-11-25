@@ -1,0 +1,118 @@
+.country {
+  display: grid;
+  gap: 18px;
+}
+
+#country.section {
+  padding-top: 28px;
+}
+
+.country__copy {
+  max-width: 640px;
+}
+
+.oblast-country {
+  display: grid;
+  gap: 16px;
+}
+
+.oblast-country svg {
+  width: min(100%, 520px);
+  height: auto;
+}
+
+.oblast-country path {
+  fill: #b7d3a4;
+  stroke: #fffdf8;
+  stroke-width: 1.2;
+  outline: none;
+}
+
+.oblast-country ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.oblast-country button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  min-height: 40px;
+  padding: 0 14px;
+  border: 0;
+  border-radius: 999px;
+  background: #123526;
+  color: #f7fff8;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 700;
+}
+
+.oblast-country small {
+  color: rgba(247, 255, 248, 0.72);
+  font-weight: 650;
+}
+
+.belarus-map--stage {
+  display: grid;
+  gap: 12px 22px;
+  padding: 16px;
+  background:
+    radial-gradient(420px 240px at 12% 0%, rgba(23, 130, 154, 0.18), transparent 70%),
+    radial-gradient(380px 220px at 90% 100%, rgba(226, 177, 90, 0.22), transparent 68%),
+    linear-gradient(160deg, #e7f6ec, #fffdf8 55%, #e5f4f6);
+}
+
+.belarus-map__tricks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.belarus-map__tricks button {
+  min-height: 40px;
+  padding: 0 14px;
+  border: 0;
+  border-radius: 999px;
+  background: #123526;
+  color: #f7fff8;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.belarus-map__tricks button.is-on {
+  background: #f3d27a;
+  color: #173024;
+}
+
+.belarus-map--stage figcaption em {
+  color: var(--color-accent-dark);
+  font-family: var(--font-display);
+  font-style: normal;
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+@media (min-width: 900px) {
+  .belarus-map--stage {
+    grid-template-columns: 1.15fr 0.85fr;
+    align-items: center;
+  }
+
+  .belarus-map--stage svg {
+    grid-column: 1;
+    grid-row: 1 / span 3;
+  }
+
+  .belarus-map__tricks,
+  .belarus-map--stage .belarus-map__legend,
+  .belarus-map--stage figcaption {
+    grid-column: 2;
+  }
+}

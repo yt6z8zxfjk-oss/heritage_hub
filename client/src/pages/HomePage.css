@@ -1,0 +1,51 @@
+.home {
+  position: relative;
+  overflow-x: clip;
+  background:
+    radial-gradient(circle at 8% 12%, rgba(23, 130, 154, 0.07), transparent 26%),
+    radial-gradient(circle at 92% 0%, rgba(15, 106, 67, 0.06), transparent 28%);
+}
+
+.home::before,
+.home::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+  border: 1px solid rgba(23, 54, 40, 0.08);
+}
+
+.home::before {
+  width: 460px;
+  height: 460px;
+  top: 80px;
+  right: -120px;
+  animation: home-ring 16s ease-in-out infinite;
+}
+
+.home::after {
+  width: 280px;
+  height: 280px;
+  top: 168px;
+  right: -20px;
+  animation: home-ring 16s 1.2s ease-in-out infinite reverse;
+}
+
+@keyframes home-ring {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.06);
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .home::before,
+  .home::after {
+    animation: none;
+  }
+}

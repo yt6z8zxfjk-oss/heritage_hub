@@ -1,0 +1,130 @@
+.district-map {
+  display: grid;
+  gap: 16px;
+  padding: 14px;
+  border-radius: 28px;
+  background: #e7f0df;
+  border: 1px solid rgba(23, 54, 40, 0.08);
+  box-shadow: 0 22px 48px rgba(23, 32, 28, 0.06);
+  animation: country-in 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.district-map svg {
+  width: 100%;
+  height: auto;
+  display: block;
+  background: transparent;
+  border-radius: 22px;
+}
+
+.district-map path {
+  stroke: rgba(255, 253, 248, 0.92);
+  stroke-width: 1.15;
+  stroke-linejoin: round;
+  cursor: pointer;
+  outline: none;
+  transition: filter 0.35s ease, stroke 0.35s ease;
+}
+
+.district-map path[data-home="true"] {
+  stroke: rgba(255, 253, 248, 0.96);
+  stroke-width: 1.25;
+}
+
+.district-map path.is-active {
+  stroke: #173628;
+  stroke-width: 1.8;
+  filter: brightness(1.12);
+}
+
+.district-map path:hover {
+  filter: brightness(1.08);
+}
+
+.district-map path:focus,
+.district-map path:focus-visible {
+  outline: none;
+}
+
+.district-map text {
+  font-family: var(--font-body);
+  font-size: 11px;
+  font-weight: 700;
+  fill: #1a2618;
+  text-anchor: middle;
+  dominant-baseline: middle;
+  pointer-events: none;
+}
+
+.district-map__card {
+  display: grid;
+  align-content: start;
+  gap: 8px;
+  padding: 18px 16px;
+  border-radius: 22px;
+  background: rgba(255, 253, 248, 0.88);
+  animation: country-card 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.district-map__card p {
+  color: var(--color-accent-dark);
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.district-map__card h3 {
+  font-size: 32px;
+}
+
+.district-map__card span {
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.district-map__card .btn {
+  justify-self: start;
+  margin-top: 8px;
+}
+
+@media (min-width: 900px) {
+  .district-map {
+    grid-template-columns: 1.4fr 0.6fr;
+    align-items: center;
+    padding: 16px;
+  }
+}
+
+@keyframes country-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes country-card {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .district-map,
+  .district-map__card,
+  .district-map path {
+    animation: none;
+    transition: none;
+  }
+}

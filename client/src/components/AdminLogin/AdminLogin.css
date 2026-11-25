@@ -1,0 +1,19 @@
+.admin-login {
+  width: min(440px, 100%);
+  margin: 24px auto;
+  display: grid;
+  gap: 12px;
+  padding: 24px;
+  background: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-md);
+}
+
+.admin-login h1 {
+  text-align: center;
+  font-size: 32px;
+}
+
+.admin-login p {
+  color: var(--color-muted);
+}

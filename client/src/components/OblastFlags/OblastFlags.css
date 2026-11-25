@@ -1,0 +1,46 @@
+.oblast-flags {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex: 0 0 auto;
+}
+
+.oblast-flags button {
+  width: 34px;
+  height: 26px;
+  padding: 2px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.oblast-flags button.is-on {
+  border-color: #6d4a32;
+  background: #efe4d4;
+}
+
+.oblast-flags img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 2px;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+@media (max-width: 899px) {
+  .header .oblast-flags {
+    display: none;
+  }
+}

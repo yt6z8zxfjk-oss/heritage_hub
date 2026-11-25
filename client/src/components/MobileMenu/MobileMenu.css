@@ -1,0 +1,103 @@
+.mobile-menu {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  display: grid;
+  align-content: start;
+  padding: calc(var(--header-h) + 12px) 16px 28px;
+  background-color: #f3f0e7;
+  background-image:
+    radial-gradient(980px 420px at 8% -8%, rgba(255, 252, 246, 0.96), transparent 62%),
+    radial-gradient(820px 560px at 100% 108%, rgba(214, 206, 190, 0.42), transparent 58%);
+  background-repeat: no-repeat;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.25s ease;
+}
+
+.mobile-menu.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.mobile-menu__sheet {
+  display: grid;
+  gap: 18px;
+  padding: 18px 16px 20px;
+  border-radius: 24px;
+  background: #fffdf8;
+  border: 1px solid rgba(20, 38, 28, 0.08);
+  box-shadow: 0 18px 40px rgba(23, 32, 28, 0.08);
+}
+
+.mobile-menu__brand {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.mobile-menu__brand img {
+  width: 84px;
+  height: 46px;
+  object-fit: contain;
+  background: transparent;
+}
+
+.mobile-menu__brand div {
+  display: grid;
+  line-height: 1.15;
+}
+
+.mobile-menu__brand .logo__title {
+  justify-items: center;
+}
+
+.mobile-menu__brand .logo__title-wide,
+.mobile-menu__brand .logo__title-peak {
+  color: var(--color-ink);
+  font-family: var(--font-story);
+  font-size: 17px;
+  font-weight: 650;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.mobile-menu__brand span {
+  color: var(--color-muted);
+  font-size: 14px;
+}
+
+.mobile-menu__nav {
+  display: grid;
+}
+
+.mobile-menu__nav a {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 4px;
+  border-top: 1px solid rgba(20, 38, 28, 0.08);
+  color: var(--color-ink);
+  text-decoration: none;
+  font-family: var(--font-display);
+  font-size: 26px;
+  font-weight: 750;
+}
+
+.mobile-menu__nav .nav-mark {
+  width: 18px;
+  height: 18px;
+  color: var(--color-primary);
+}
+
+.mobile-menu__nav a.is-active {
+  color: var(--color-primary-dark);
+}
+
+@media (min-width: 900px) {
+  .mobile-menu {
+    display: none;
+  }
+}

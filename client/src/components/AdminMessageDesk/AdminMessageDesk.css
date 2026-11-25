@@ -1,0 +1,41 @@
+.message-desk {
+  display: grid;
+  gap: 16px;
+  padding: 22px 24px 26px;
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+}
+
+.message-desk__reply {
+  display: grid;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.thread-list__item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 8px;
+  align-items: center;
+}
+
+.thread-list small {
+  display: block;
+  color: var(--color-muted);
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.message-desk__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+@media (min-width: 800px) {
+  .message-desk.has-threads {
+    grid-template-columns: 240px 1fr;
+    align-items: start;
+  }
+}

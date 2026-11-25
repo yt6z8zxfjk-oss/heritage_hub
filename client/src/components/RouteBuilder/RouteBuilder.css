@@ -1,0 +1,64 @@
+.route-builder {
+  display: grid;
+  gap: 10px;
+  padding: 16px;
+  border-radius: var(--radius-md);
+  background: var(--color-bg-deep);
+}
+
+.route-builder ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 8px;
+}
+
+.route-builder h4,
+.route-builder__measure {
+  margin: 0;
+}
+
+.route-builder__day {
+  display: grid;
+  gap: 8px;
+  min-width: 0;
+}
+
+.route-builder li {
+  display: flex;
+  justify-content: space-between;
+  gap: 8px;
+  align-items: center;
+  min-width: 0;
+}
+
+.route-builder li span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.route-builder li button {
+  border: 0;
+  background: transparent;
+  color: var(--color-accent-dark);
+  cursor: pointer;
+  font-weight: 650;
+}
+
+.route-builder__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-right: 156px;
+}
+
+@media (max-width: 719px) {
+  .route-builder__actions {
+    padding-right: 0;
+  }
+}
+
+.route-builder__link {
+  font-weight: 700;
+}

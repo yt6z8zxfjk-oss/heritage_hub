@@ -1,0 +1,22 @@
+.lang-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  flex: 0 0 auto;
+}
+
+.lang-switch button {
+  border: 0;
+  background: transparent;
+  color: var(--color-muted);
+  font: inherit;
+  font-size: 13px;
+  letter-spacing: 0.06em;
+  padding: 6px 5px;
+  cursor: pointer;
+}
+
+.lang-switch button.is-on {
+  color: var(--color-ink);
+  font-weight: 700;
+}
